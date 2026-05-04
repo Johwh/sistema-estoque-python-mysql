@@ -91,3 +91,36 @@ VALUES
 ('Tablet Lite', 'Tablet compacto e leve', 299.99, 15, 3, 3),
 ('Monitor Gamer', 'Monitor Full HD 144hz', 899.99, 8, 4, 1),
 ('Mouse Gamer', 'Mouse RGB', 149.99, 20, 5, 2);
+
+-- ======================
+-- CONSULTAS
+-- ======================
+
+SELECT * FROM produtos;
+
+SELECT nome_produto, preco
+FROM produtos
+WHERE preco > 500;
+
+SELECT nome_produto, quantidade
+FROM produtos
+WHERE quantidade < 10;
+
+-- ======================
+-- ATUALIZACOES
+-- ======================
+
+UPDATE produtos
+SET quantidade = 25
+WHERE id_produto = 5;
+
+UPDATE clientes
+SET endereco = 'Avenida Paulista'
+WHERE id_cliente = 1;
+
+-- ======================
+-- REMOCOES
+-- ======================
+
+DELETE FROM produtos
+WHERE id_produto = 3;
